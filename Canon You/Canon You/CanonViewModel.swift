@@ -1,3 +1,6 @@
+// Aporte: implementación de la lógica de selección de personajes (máximo 5)
+// Luisa Hernández
+
 import SwiftUI
 import Combine
 
