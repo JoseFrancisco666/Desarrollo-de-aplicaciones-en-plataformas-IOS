@@ -27,7 +27,8 @@ struct SelectionView: View {
             Text("Seleccionados: \(viewModel.seleccionados.count) de 5")
                 .padding()
 
-            NavigationLink(destination: ResultadosView(personajesElegidos: viewModel.seleccionados)) {
+            // CAMBIO AQUÍ: Ahora pasamos el viewModel completo
+            NavigationLink(destination: ResultadosView(viewModel: viewModel)) {
                 Text("Generar Perfil")
                     .bold()
                     .frame(width: 220, height: 50)
@@ -38,5 +39,9 @@ struct SelectionView: View {
             .disabled(!viewModel.puedeGenerarPerfil)
         }
         .navigationTitle("Fandom")
+        // CAMBIO AQUÍ: Esto limpia la lista cada vez que la pantalla aparece
+        .onAppear {
+            viewModel.resetApp()
+        }
     }
 }

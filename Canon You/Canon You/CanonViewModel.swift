@@ -1,6 +1,3 @@
-// Aporte: implementación de la lógica de selección de personajes (máximo 5)
-// Luisa Hernández
-
 import SwiftUI
 import Combine
 
@@ -39,4 +36,9 @@ class CanonViewModel: ObservableObject {
     }
     
     var puedeGenerarPerfil: Bool { seleccionados.count == 5 }
+
+    // ESTA ES LA FUNCIÓN NUEVA PARA LIMPIAR TODO
+    func resetApp() {
+        seleccionados = []
+    }
 }
