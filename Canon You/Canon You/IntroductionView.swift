@@ -1,5 +1,8 @@
 import SwiftUI
 
+// Aporte: pantalla introductoria para mejorar la experiencia del usuario
+// Explica el propósito de la app antes de iniciar el análisis
+
 struct IntroductionView: View {
   @Binding var showIntro: Bool
 
