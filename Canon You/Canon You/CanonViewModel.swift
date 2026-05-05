@@ -1,6 +1,11 @@
 import SwiftUI
 import Combine
 
+// Actualización MVP:
+// Se añadió funcionalidad para reiniciar el flujo de la app
+// limpiando los personajes seleccionados desde el ViewModel.
+// Luisa Hernández
+
 class CanonViewModel: ObservableObject {
     @Published var listaPersonajes: [Personaje] = [
         Personaje(nombre: "Batman", categoria: .intelectualFrio, descripcion: "Eres una mente analítica que prefiere la preparación.", nombreImagen: "batman"),
